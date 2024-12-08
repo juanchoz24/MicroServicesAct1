@@ -1,0 +1,57 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-MicroserviceGatewayApplication<microservice-gateway>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.actividad_1.microservice_gateway.MicroserviceGatewayApplication",
+            "projectName": "microservice-gateway",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=57213 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=microservice-gateway"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MicroservicePersonaApplication<microservice-persona>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.actividad_1.microservice_persona.MicroservicePersonaApplication",
+            "projectName": "microservice-persona",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=57235 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=microservice-persona"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MicroserviceEurekaApplication<microservice-eureka>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.actividad_1.microservice_eureka.MicroserviceEurekaApplication",
+            "projectName": "microservice-eureka",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env",
+            "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=57168 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=microservice-eureka"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MicroserviceRegistroApplication<microservice-registro>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.actividad_1.microservice_registro.MicroserviceRegistroApplication",
+            "projectName": "microservice-registro",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MicroserviceRegistroApplication<microservice-registro>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.actividad_1.MicroserviceRegistroApplication",
+            "projectName": "microservice-registro",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
