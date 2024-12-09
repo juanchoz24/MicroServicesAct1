@@ -48,6 +48,17 @@ public class PersonasController {
         return ResponseEntity.ok(per);
     }
 
+    @GetMapping("/buscarid/{id}")
+    public ResponseEntity<Personas> findByID(@PathVariable("id") String id) {
+        Integer idInt = Integer.parseInt(id);
+        Optional<Optional<Personas>>  per = Optional.ofNullable(personasService.findById(idInt));
+        if (per.isPresent()) {
+            return new ResponseEntity<>(per.get().get(), HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
+
     @GetMapping("/buscar/{documento}")
     public ResponseEntity<Personas> findByDoc(@PathVariable("documento") String documento) {
         Optional<Personas>  per = Optional.ofNullable(personasService.findByDocumento(documento));
@@ -71,7 +82,7 @@ public class PersonasController {
 
     @PutMapping("/actualizar")
     public ResponseEntity<Personas> actualizarPersona(@RequestBody Personas persona) {
-        Optional<Personas> per = personasService.findById(persona.getId());
+        Optional<Personas> per = personasService.findById((persona.getId()));
         if (per.isPresent()) {
             persona.setId(persona.getId());
             Personas personaActualizada = personasService.save(persona);            

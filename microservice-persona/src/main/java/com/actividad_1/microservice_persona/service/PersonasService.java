@@ -7,16 +7,16 @@ import com.actividad_1.microservice_persona.entity.Personas;
 
 public interface PersonasService {
 
-    List<Personas> findAll();
+    public List<Personas> findAll();
 
-    Optional<Personas> findById(int id);
+    public Optional<Personas> findById(int id);
 
-    Personas findByDocumento(String documento);
+    public Personas findByDocumento(String documento);
 
-    Personas save(Personas personas);
+    public Personas save(Personas personas);
 
-    void deleteById(int id);
+    public void deleteById(int id);
 
-    List<Personas> findByApartamento(int apartamento);
+    public List<Personas> findByApartamento(int apartamento);
 
 }

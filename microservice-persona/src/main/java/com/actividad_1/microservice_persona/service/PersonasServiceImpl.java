@@ -37,13 +37,13 @@ public class PersonasServiceImpl implements PersonasService{
     }
 
     @Override
-    public Optional<Personas> findById(int id) {
-        return personaRepository.findById((Integer) id);
+    public List<Personas> findByApartamento(int apartamento) {
+        return personaRepository.findByApartamento(apartamento);
     }
 
     @Override
-    public List<Personas> findByApartamento(int apartamento) {
-        return personaRepository.findByApartamento(apartamento);
+    public Optional<Personas> findById(int id) {
+         return personaRepository.findById(id);
     }
 
     

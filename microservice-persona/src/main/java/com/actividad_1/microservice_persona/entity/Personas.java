@@ -59,5 +59,5 @@ public class Personas {
     private String email;
 
     @Column(name = "apartamento")
-    private int apartamento;
+    private Integer apartamento;
 }
