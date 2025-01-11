@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 import com.actividad_1.microservice_registro.entity.Apartamento;
 
 @Repository
-public interface ApartamentoRepository extends CrudRepository<Apartamento,Integer>{
+public interface ApartamentoRepository extends CrudRepository<Apartamento,String>{
 
     Optional<Apartamento> findById(String id);
 

@@ -68,9 +68,9 @@ public class ApartamentoController {
         }
     }
 
-    @DeleteMapping("/borrar/{documento}")
+    @DeleteMapping("/borrar/{id}")
     @ResponseStatus(HttpStatus.ACCEPTED)
-    public ResponseEntity<Void> deleteById(@PathVariable("apartamento") String id) {
+    public ResponseEntity<Void> deleteById(@PathVariable("id") String id) {
         Optional<Optional<Apartamento>> aptoExiste = Optional.ofNullable(apartamentoService.findById(id));
         if (aptoExiste.isPresent()) {
             Apartamento apartamento =  new Apartamento(aptoExiste);

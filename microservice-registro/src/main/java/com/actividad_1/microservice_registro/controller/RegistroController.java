@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 
 @RestController
-@RequestMapping("/api/registro(v1)")
+@RequestMapping("/api/registro(v1)/client")
 public class RegistroController {
     @Autowired
     PersonaService personaService;
